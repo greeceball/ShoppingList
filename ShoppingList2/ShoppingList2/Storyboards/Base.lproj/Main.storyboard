@@ -25,13 +25,15 @@
                                         <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-nR-0oV">
                                             <rect key="frame" x="20" y="11" width="374" height="23"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jK7-a2-ztU">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Item ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jK7-a2-ztU">
                                                     <rect key="frame" x="0.0" y="0.0" width="351" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-A1-ePy">
                                                     <rect key="frame" x="351" y="0.0" width="23" height="23"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uZx-A1-ePy" secondAttribute="height" multiplier="1:1" id="wla-Xh-AfQ"/>
                                                     </constraints>
@@ -53,6 +55,7 @@
                                         <constraint firstItem="a9d-nR-0oV" firstAttribute="top" secondItem="VrG-Tl-XYT" secondAttribute="topMargin" id="l1x-c1-ruo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.14524361490000001" green="0.35173758859999998" blue="0.62356287239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="completeButton" destination="uZx-A1-ePy" id="J8p-PZ-8aD"/>
                                     <outlet property="nameLabel" destination="jK7-a2-ztU" id="B9P-qP-2b5"/>
@@ -84,6 +87,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ce-vQ-Gqv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14524361490000001" green="0.35173758859999998" blue="0.62356287239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.14524361490000001" green="0.35173758859999998" blue="0.62356287239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
