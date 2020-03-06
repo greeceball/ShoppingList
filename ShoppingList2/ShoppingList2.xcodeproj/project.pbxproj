@@ -16,6 +16,7 @@
 		34A6EB452412B7CD00A8C99E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB442412B7CD00A8C99E /* CoreDataStack.swift */; };
 		34A6EB492412B84300A8C99E /* GroceryItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */; };
 		34A6EB4B2412B8B700A8C99E /* GroceryItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB4A2412B8B700A8C99E /* GroceryItem+Convenience.swift */; };
+		34A6EB512412BC8100A8C99E /* GroceryItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB502412BC8100A8C99E /* GroceryItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		34A6EB442412B7CD00A8C99E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemListTableViewController.swift; sourceTree = "<group>"; };
 		34A6EB4A2412B8B700A8C99E /* GroceryItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryItem+Convenience.swift"; sourceTree = "<group>"; };
+		34A6EB502412BC8100A8C99E /* GroceryItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		34A6EB462412B7EA00A8C99E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				34A6EB4F2412BC3D00A8C99E /* ModelControllers */,
 				34A6EB472412B7F100A8C99E /* ViewControllers */,
 			);
 			path = Controllers;
@@ -114,6 +117,14 @@
 				34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		34A6EB4F2412BC3D00A8C99E /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34A6EB502412BC8100A8C99E /* GroceryItemController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				34A6EB352412B59500A8C99E /* ShoppingList2.xcdatamodeld in Sources */,
 				34A6EB2B2412B59500A8C99E /* AppDelegate.swift in Sources */,
 				34A6EB2D2412B59500A8C99E /* SceneDelegate.swift in Sources */,
+				34A6EB512412BC8100A8C99E /* GroceryItemController.swift in Sources */,
 				34A6EB452412B7CD00A8C99E /* CoreDataStack.swift in Sources */,
 				34A6EB492412B84300A8C99E /* GroceryItemListTableViewController.swift in Sources */,
 			);
