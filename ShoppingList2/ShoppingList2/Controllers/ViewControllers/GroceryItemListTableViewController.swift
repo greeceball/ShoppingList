@@ -21,25 +21,25 @@ class GroceryItemListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return GroceryItemController.sharedInstance.fetchedResultsController.fetchedObjects?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
-
+        let groceryItem = GroceryItemController.sharedInstance.fetchedResultsController.object(at: indexPath)
         
+        cell.textLabel?.text = groceryItem.itemName
 
         return cell
     }
     
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let itemToDelete = GroceryItemController.sharedInstance.fetchedResultsController.object(at: indexPath)
+            
+            GroceryItemController.sharedInstance.delete(groceryItem: itemToDelete)
+        }
     }
 }

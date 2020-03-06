@@ -14,6 +14,8 @@ class GroceryItemController {
     //MARK: - Properties
     static let sharedInstance = GroceryItemController()
     
+    
+    
     var fetchedResultsController: NSFetchedResultsController<GroceryItem>
     
     init() {
@@ -33,16 +35,18 @@ class GroceryItemController {
     }
     //MARK: - CRUD methods
     
-    func create() {
-        
+    func create(withName groceryItem: String) {
+        let _ = GroceryItem(itemName: groceryItem)
+        saveToPersistentStore()
     }
     
-    func update() {
-        
-    }
+//    func update() {
+//
+//    }
     
-    func delete() {
-        
+    func delete(groceryItem: GroceryItem) {
+        CoreDataStack.context.delete(groceryItem)
+        saveToPersistentStore()
     }
     
     func saveToPersistentStore() {
