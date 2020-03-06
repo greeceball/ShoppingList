@@ -6,38 +6,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Shopping list-->
         <scene sceneID="HeK-bL-oZt">
             <objects>
-                <tableViewController id="o55-d6-Hf5" sceneMemberID="viewController">
+                <tableViewController id="o55-d6-Hf5" customClass="GroceryItemListTableViewController" customModule="ShoppingList2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dw4-29-RBm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="57" id="EHw-lo-1d1">
-                                <rect key="frame" x="0.0" y="28" width="414" height="57"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="45" id="EHw-lo-1d1" customClass="ButtonTableViewCell" customModule="ShoppingList2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EHw-lo-1d1" id="VrG-Tl-XYT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-nR-0oV">
-                                            <rect key="frame" x="20" y="11" width="374" height="35"/>
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-nR-0oV">
+                                            <rect key="frame" x="20" y="11" width="374" height="23"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jK7-a2-ztU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="339" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="351" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-A1-ePy">
-                                                    <rect key="frame" x="339" y="0.0" width="35" height="35"/>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-A1-ePy">
+                                                    <rect key="frame" x="351" y="0.0" width="23" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uZx-A1-ePy" secondAttribute="height" multiplier="1:1" id="wla-Xh-AfQ"/>
                                                     </constraints>
+                                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                     <state key="normal" image="incomplete">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="completeButtonTapped:" destination="EHw-lo-1d1" eventType="touchUpInside" id="8ba-rr-HS7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -49,6 +53,11 @@
                                         <constraint firstItem="a9d-nR-0oV" firstAttribute="top" secondItem="VrG-Tl-XYT" secondAttribute="topMargin" id="l1x-c1-ruo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.64747551209999998" green="1" blue="0.32970748090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="completeButton" destination="uZx-A1-ePy" id="J8p-PZ-8aD"/>
+                                    <outlet property="nameLabel" destination="jK7-a2-ztU" id="B9P-qP-2b5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,8 +65,13 @@
                             <outlet property="delegate" destination="o55-d6-Hf5" id="Coy-2n-bsZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EHP-Gl-bpr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Do8-Sc-sss"/>
+                    <navigationItem key="navigationItem" title="Shopping list" id="EHP-Gl-bpr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Do8-Sc-sss">
+                            <color key="tintColor" red="0.64747551209999998" green="1" blue="0.32970748090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="o55-d6-Hf5" id="SJq-MW-XMX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgH-aX-nJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,6 +85,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ce-vQ-Gqv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14524361490000001" green="0.35173758859999998" blue="0.62356287239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="o55-d6-Hf5" kind="relationship" relationship="rootViewController" id="EuQ-pQ-TKn"/>
@@ -82,6 +97,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="incomplete" width="512" height="512"/>
+        <image name="incomplete" width="60" height="60"/>
     </resources>
 </document>

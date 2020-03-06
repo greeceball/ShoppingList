@@ -17,6 +17,9 @@
 		34A6EB492412B84300A8C99E /* GroceryItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */; };
 		34A6EB4B2412B8B700A8C99E /* GroceryItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB4A2412B8B700A8C99E /* GroceryItem+Convenience.swift */; };
 		34A6EB512412BC8100A8C99E /* GroceryItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB502412BC8100A8C99E /* GroceryItemController.swift */; };
+		34A6EB532412C58800A8C99E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB522412C58800A8C99E /* Item.swift */; };
+		34A6EB552412C5D600A8C99E /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB542412C5D600A8C99E /* ItemController.swift */; };
+		34A6EB572412CA7A00A8C99E /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6EB562412CA7A00A8C99E /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemListTableViewController.swift; sourceTree = "<group>"; };
 		34A6EB4A2412B8B700A8C99E /* GroceryItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroceryItem+Convenience.swift"; sourceTree = "<group>"; };
 		34A6EB502412BC8100A8C99E /* GroceryItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemController.swift; sourceTree = "<group>"; };
+		34A6EB522412C58800A8C99E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		34A6EB542412C5D600A8C99E /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		34A6EB562412CA7A00A8C99E /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 				34A6EB332412B59500A8C99E /* ShoppingList2.xcdatamodeld */,
 				34A6EB442412B7CD00A8C99E /* CoreDataStack.swift */,
 				34A6EB4A2412B8B700A8C99E /* GroceryItem+Convenience.swift */,
+				34A6EB522412C58800A8C99E /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				34A6EB482412B84300A8C99E /* GroceryItemListTableViewController.swift */,
+				34A6EB562412CA7A00A8C99E /* ButtonTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				34A6EB502412BC8100A8C99E /* GroceryItemController.swift */,
+				34A6EB542412C5D600A8C99E /* ItemController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -199,10 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A6EB4B2412B8B700A8C99E /* GroceryItem+Convenience.swift in Sources */,
+				34A6EB552412C5D600A8C99E /* ItemController.swift in Sources */,
 				34A6EB352412B59500A8C99E /* ShoppingList2.xcdatamodeld in Sources */,
 				34A6EB2B2412B59500A8C99E /* AppDelegate.swift in Sources */,
 				34A6EB2D2412B59500A8C99E /* SceneDelegate.swift in Sources */,
+				34A6EB532412C58800A8C99E /* Item.swift in Sources */,
 				34A6EB512412BC8100A8C99E /* GroceryItemController.swift in Sources */,
+				34A6EB572412CA7A00A8C99E /* ButtonTableViewCell.swift in Sources */,
 				34A6EB452412B7CD00A8C99E /* CoreDataStack.swift in Sources */,
 				34A6EB492412B84300A8C99E /* GroceryItemListTableViewController.swift in Sources */,
 			);
