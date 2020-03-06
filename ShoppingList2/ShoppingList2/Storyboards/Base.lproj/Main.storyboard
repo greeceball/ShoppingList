@@ -53,7 +53,6 @@
                                         <constraint firstItem="a9d-nR-0oV" firstAttribute="top" secondItem="VrG-Tl-XYT" secondAttribute="topMargin" id="l1x-c1-ruo"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.64747551209999998" green="1" blue="0.32970748090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="completeButton" destination="uZx-A1-ePy" id="J8p-PZ-8aD"/>
                                     <outlet property="nameLabel" destination="jK7-a2-ztU" id="B9P-qP-2b5"/>

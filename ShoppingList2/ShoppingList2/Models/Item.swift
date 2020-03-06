@@ -13,7 +13,7 @@ class Item {
   var itemName: String
   var uuid: UUID = UUID()
   
-  init(itemName: String) {
+    init(itemName: String, isComplete: Bool = false) {
     self.itemName = itemName
   }
 }

@@ -19,7 +19,7 @@ class ButtonTableViewCell: UITableViewCell {
     //MARK: - Actions
     
     @IBAction func completeButtonTapped(_ sender: Any) {
-        isComplete != isComplete
+        isComplete = !isComplete
         updateButton(isComplete)
         
     }
