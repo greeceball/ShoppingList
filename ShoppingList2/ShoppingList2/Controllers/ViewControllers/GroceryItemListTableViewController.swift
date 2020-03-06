@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class GroceryItemListTableViewController: UITableViewController {
 
@@ -42,4 +43,49 @@ class GroceryItemListTableViewController: UITableViewController {
             GroceryItemController.sharedInstance.delete(groceryItem: itemToDelete)
         }
     }
+}
+
+//MARK: - NSFetchedResultsControllerDelegate  NSFetchedResultsControllerDelegate
+
+extension GroceryItemListTableViewController: NSFetchedResultsControllerDelegate {
+  func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    tableView.beginUpdates()
+  }
+  // sets behavior for cells
+  func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+    let indexSet = IndexSet(integer: sectionIndex)
+    switch type {
+    case .insert:
+      tableView.insertSections(indexSet, with: .fade)
+    case .delete:
+      tableView.deleteSections(indexSet, with: .fade)
+    default: return
+    }
+  }
+  // additional behavior for cells
+  func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    switch type {
+    case .insert:
+      guard let newIndexPath = newIndexPath
+        else { return }
+      tableView.insertRows(at: [newIndexPath], with: .fade)
+    case .delete:
+      guard let indexPath = indexPath
+        else { return }
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    case .update:
+      guard let indexPath = indexPath
+        else { return }
+      tableView.reloadRows(at: [indexPath], with: .none)
+    case .move:
+      guard let indexPath = indexPath, let newIndexPath = newIndexPath
+        else { return }
+      tableView.moveRow(at: indexPath, to: newIndexPath)
+    @unknown default:
+      fatalError("NSFetchedResultsChangeType has new unhandled cases")
+    }
+  }
+  func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    tableView.endUpdates()
+  }
 }
